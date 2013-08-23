@@ -8,7 +8,7 @@
         You haven't referred anyone yet.<br />
       <% end %>
       Link: <a href="#"><%= "#{root_url}?code=#{@user.code}" %></a><br />
-      <a href="https://twitter.com/intent/tweet?url=<%= "#{root_url}?code=#{@user.code}" %>&text=Build+relationships,+not+spreadsheets+with+@PressRM.+It's+CRM+for+PR+and+social+pros.+Sign+up+at&" data-related="pressrm" class="btn share twitter" target="_blank">Twitter</a>
+      <a href="https://twitter.com/intent/tweet?url=<%=u "#{root_url}?code=#{@user.code}"%>&text=Build+relationships,+not+spreadsheets+with+@PressRM.+It's+CRM+for+PR+and+social+pros.+Sign+up+at&" data-related="pressrm" class="btn share twitter" target="_blank">Twitter</a>
       <a href="https://www.facebook.com/sharer/sharer.php?u=<%=u "#{root_url}?code=#{@user.code}"%>" class="btn share facebook" target="_blank">Facebook</a>
       <a href="https://plus.google.com/share?url=<%= "#{root_url}?code=#{@user.code}" %>" onclick="javascript:window.open(this.href,
         '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="btn share googleplus">Google+</a>
@@ -17,4 +17,3 @@
   </div>
 </div>
 
-      <a href="https://twitter.com/intent/tweet?url=<%=u "#{root_url}?code=#{@user.code}"%>&text=Build+relationships,+not+spreadsheets+with+@PressRM.+It's+CRM+for+PR+and+social+pros.+Sign+up+at&" data-related="pressrm" class="btn share twitter" target="_blank">Twitter</a>
