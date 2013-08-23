@@ -1,32 +1,108 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>LaunchPage</title>
+  <title>PressRM - Press Relationship Management</title>
+  <META NAME="Description" CONTENT="Build Relationships, Not Spreadsheets with CRM for PR and Social Media Professionals.">
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+
+  <style style="text/css">
+  html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  #full-screen-background-image {
+    z-index: -999;
+    min-height: 100%;
+    min-width: 1200px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  body {
+    padding-top: 50px;
+    color: #fff;
+  }
+  h1,h3 {
+    text-align: center;
+    line-height: 1.3;
+    color: #fff;
+  }
+  .text {
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: center;
+    color: #f1f1f1;
+  }
+  .closing,.closing a {
+    font-size: 14px;
+    margin-top: 20px;
+    text-align: center;
+    color: #f1f1f1;
+    font-weight: 300;
+  }
+  .form-control {
+    font-size: 22px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .btn.signup {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .btn.share {
+    margin-top: 10px;
+  }
+  .btn.twitter {
+    background-color: #4099ff;
+    color: #fff;
+    border: none;
+  }
+  .btn.facebook {
+    background-color: #3b5998;
+    color: #fff;
+    border: none;
+  }
+  .btn.googleplus {
+    background-color: #d94834;
+    color: #fff;
+    border: none;
+  }
+  .btn.linkedin {
+    background-color: #007bb6;
+    color: #fff;
+    border: none;
+  }
+</style>
 </head>
 <body>
 
-<nav class="navbar navbar-default" role="navigation">
-  <!-- Brand and toggle get grouped for better mobile display -->
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="<%= root_url %>">LaunchPage</a>
-  </div>
-
- <ul class="nav navbar-nav navbar-right">
-      <li><a href="<%= "#{root_url}lock/login" %>">Admin</a></li>
-  </ul>
-</nav>
-
 <div class="container">
-<%= yield %>
+  <img alt="full screen background image" src="/assets/background-big.jpg" id="full-screen-background-image" /> 
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3"><h1>PressRM</h1><h3>Build Relationships, Not Spreadsheets with CRM for PR <i>&</i> Social Media Professionals</h3></div>
+  </div>
+  <%= yield %>
+  <br />
+  <div class="row">
+    <div class="col-lg-2 col-lg-offset-2"><p class="text"><img src="/assets/contacts.png" style="height:40px;"><br />Manage press and influencer contacts with ease</p></div>
+    <div class="col-lg-2 col-lg-offset-1"><p class="text"><img src="/assets/related.png" style="height:40px;"><br />Identify new contacts via recommendations</p></div>
+    <div class="col-lg-2 col-lg-offset-1"><p class="text"><img src="/assets/engage.png" style="height:40px;"><br />Listen, build relationships, and outreach</p></div>
+  </div>
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+      <p class="closing">
+        hello@pressrm.com. image by <a href="http://www.flickr.com/photos/luxuryluke/3779503370/sizes/l/" target="_blank">luxuryluke</a>.
+      </p>
+    </div>
+  </div>
 </div>
 
 </body>

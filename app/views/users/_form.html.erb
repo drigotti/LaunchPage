@@ -11,12 +11,16 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <b>Tell us your email address:</b><br />
-    <%= f.text_field :email %>
-  </div>
-  <%= f.hidden_field :code %>
-  <div class="actions">
-    <%= f.submit "Submit" %>
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+      <div class="input-group field">
+        <%= f.text_field :email, :class => "form-control", :placeholder => "Email address" %>
+        <%= f.hidden_field :code %>
+        <span class="input-group-btn">
+          <%= f.submit "Sign up", :class => "btn btn-success signup" %>
+        </span>
+      </div>
+    </div>
   </div>
 <% end %>
+

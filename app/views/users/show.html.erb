@@ -1,28 +1,18 @@
-<h2>We got you!</h2>
-<p class="lead">Share your custom URL with friends and we'll keep track of how many people you refer.</p>
-
-<% if @user.count %>
-<p>
-  You've referred <%= @user.count %> people! Sweet! </br>
-</p>
-<% end %>
-
-<p>
-  <b>Share this URL with your friends:</b>
-  <input type="email" class="form-control" id="exampleInputEmail1" value="<%= "#{root_url}?code=#{@user.code}" %>">
-  
-</p>
-
-<p>
-<b>Share to your networks:</b><br />
-  <a href="https://twitter.com/share?text=<%= "#{root_url}?code=#{@user.code}" %>" data-related="[username]" class="btn btn-default" target="_blank">Twitter</a>
-  <a href="https://www.facebook.com/sharer/sharer.php?u=<%= "#{root_url}?code=#{@user.code}" %>" class="btn btn-default" target="_blank">Facebook</a>
-  <a href="https://plus.google.com/share?url=[URL]" onclick="javascript:window.open(this.href,
-    '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="btn btn-default" target="_blank">Google+</a>
-  <a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A//[url]&title=[title%20title]&summary=[summary%20summary]" class="btn btn-default" target="_blank">LinkedIn</a>
-</p>
-
-
-
-
-
+<div class="row">
+  <div class="col-lg-6 col-lg-offset-3">
+    <p class="text"><i>We got you! To say thanks, we have a special offer for you. <b>Refer someone to sign up and we'll give you a free month of PressRM PRO</b> when it launches.</i></p>
+    <p class="text">
+      <% if @user.count %>
+        Your referrals: <%= @user.count %><br />
+        <% else %>
+        You haven't referred anyone yet.<br />
+      <% end %>
+      Link: <a href="#"><%= "#{root_url}?code=#{@user.code}" %></a><br />
+      <a href="https://twitter.com/share?text=Build+relationships,+not+spreadsheets+with+@PressRM.+It's+CRM+for+PR+and+social+pros.+Join+me+<%= "#{root_url}?code=#{@user.code}" %>.+RT?" data-related="pressrm" class="btn share twitter" target="_blank">Twitter</a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=<%=u "#{root_url}?code=#{@user.code}"%>" class="btn share facebook" target="_blank">Facebook</a>
+      <a href="https://plus.google.com/share?url=<%= "#{root_url}?code=#{@user.code}" %>" onclick="javascript:window.open(this.href,
+        '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="btn share googleplus">Google+</a>
+      <a href="http://www.linkedin.com/shareArticle?mini=true&url=<%= "#{root_url}?code=#{@user.code}" %>&title=CRM%20For%20PR%20and%20Social%20Professionals&summary=Build%20relationships,%20not%20spreadsheets.%20Signup%20today!" class="btn share linkedin" target="blank">LinkedIn</a>
+      </p>
+  </div>
+</div>
